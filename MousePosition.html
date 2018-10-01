@@ -1,28 +1,28 @@
 <!--Adapted from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onmousemove-->
 <!DOCTYPE html>
 <html>
-	<head>
-		<style>
-div
-{
-	width: 500px;
-	height: 500px;
-	border: 1px solid black;
-}
-		</style>
-	</head>
-	<body>
-		<script>
-			function myFunction(e) 
-{
-	var x = e.clientX;
-	var y = e.clientY;
-	var coor = "Coordinates: (" + x + "," + y + ")";
-	document.getElementById("demo").innerHTML = coor;
-}
-		</script>
-		<div onmousemove="myFunction(event)"></div>
-		<p id="demo"></p>
+<head>
+<style>
+	div
+	{
+		width: 500px;
+		height: 500px;
+		border: 1px solid black;
+	}	
+</style>
+</head>
+<body>
+<script>
+	function myFunction(e) 
+	{
+		var x = e.clientX;
+		var y = e.clientY;
+		var coor = "Coordinates: (" + x + "," + y + ")";
+		document.getElementById("demo").innerHTML = coor;
+	}
+</script>
+<div onmousemove="myFunction(event)"></div>
+<p id="demo"></p>
 
-	</body>
+</body>
 </html>

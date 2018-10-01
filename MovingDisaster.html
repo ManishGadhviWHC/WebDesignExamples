@@ -1,0 +1,37 @@
+<!--Adapted from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onmousemove-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+canvas
+{
+	width: 800px;
+	height: 300px;
+	border: 1px solid black;
+}
+</style>
+</head>
+<body>
+	<canvas id="cvs" onmousemove="move(event)"></canvas>
+	<p id="demo"></p>
+<script>
+	var cvss = document.getElementById("cvs");
+	var sqr = cvss.getContext("2d");
+	
+	function move(e)
+	{
+		var x = e.clientX-100;
+		var y = e.clientY;
+		sqr.beginPath();
+		sqr.lineWidth="1";
+		sqr.strokeStyle="red";	
+		sqr.rect(x,y,5,5);
+		sqr.stroke();
+		document.getElementById("demo").innerHTML = ("x: "+x + ", Y: "+y);
+
+	}
+</script>
+
+</body>
+</html>
